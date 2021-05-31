@@ -1,0 +1,16 @@
+{
+    "resource": "crm",
+    "version": "v3",
+    "methods": {
+        "getAll": {
+            "path": "owners",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/owners",
+            "action": "get"
+        },
+        "get": {
+            "path": "owners/{id}",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/owners",
+            "action": "get"
+        }
+    }
+}

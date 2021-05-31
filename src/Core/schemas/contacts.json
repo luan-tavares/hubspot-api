@@ -1,0 +1,77 @@
+{
+    "resource": "contacts",
+    "version": "v1",
+    "bodyPropertyLabel": "property",
+    "index": "vid",
+    "methods": {
+        "getAll": {
+            "path": "lists/all/contacts/all",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/get_contacts",
+            "action": "get"
+        },
+        "getById": {
+            "path": "contact/vid/{vid}/profile",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/get_contact",
+            "action": "get"
+        },
+        "getByEmail": {
+            "path": "contact/email/{email}/profile",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/get_contact_by_email",
+            "action": "get"
+        },
+        "getRecentlyUpdated": {
+            "path": "lists/recently_updated/contacts/recent",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/get_recently_updated_contacts",
+            "action": "get"
+        },
+        "getRecentlyCreated": {
+            "path": "lists/all/contacts/recent",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/get_recently_created_contacts",
+            "action": "get"
+        },
+        "getBatchById": {
+            "path": "contact/vids/batch",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/get_batch_by_vid",
+            "action": "batchGetContacts"
+        },
+        "getBatchByEmail": {
+            "path": "contact/emails/batch",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/get_batch_by_email",
+            "action": "batchGetContactsByEmail"
+        },
+        "create": {
+            "path": "contact",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/create_contact",
+            "action": "createOrUpdate"
+        },
+        "updateById": {
+            "path": "contact/vid/{vid}/profile",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/update_contact",
+            "action": "createOrUpdate"
+        },
+        "updateByEmail": {
+            "path": "contact/email/{email}/profile",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/update_contact-by-email",
+            "action": "createOrUpdate"
+        },
+        "createOrUpdate": {
+            "path": "contact/createOrUpdate/email/{email}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/create_or_update",
+            "action": "createOrUpdate"
+        },
+        "batchCreateOrUpdate": {
+            "path": "contact/batch",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/batch_create_or_update",
+            "action": "createOrUpdate",
+            "batchKeys": [
+                "vid",
+                "email"
+            ]
+        },
+        "delete": {
+            "path": "contact/vid/{vid}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/delete_contact",
+            "action": "delete"
+        }
+    }
+}

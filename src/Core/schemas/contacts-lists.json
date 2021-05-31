@@ -1,0 +1,66 @@
+{
+    "resource": "contacts",
+    "version": "v1",
+    "methods": {
+        "get": {
+            "path": "lists/{list_id}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/get_list",
+            "action": "get"
+        },
+        "getAll": {
+            "path": "lists",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/get_lists",
+            "action": "get"
+        },
+        "create": {
+            "path": "lists",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/create_list",
+            "action": "createOrUpdate"
+        },
+        "update": {
+            "path": "lists/{list_id}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/update_list",
+            "action": "createOrUpdate"
+        },
+        "delete": {
+            "path": "lists/{list_id}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/delete_list",
+            "action": "delete"
+        },
+        "getBatch": {
+            "path": "lists/batch",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/get_batch_lists",
+            "action": "batchGetLists"
+        },
+        "getStatic": {
+            "path": "lists/static",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/get_static_lists",
+            "action": "get"
+        },
+        "getDynamic": {
+            "path": "lists/dynamic",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/get_dynamic_lists",
+            "action": "get"
+        },
+        "getContacts": {
+            "path": "lists/{list_id}/contacts/all",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/get_list_contacts",
+            "action": "get"
+        },
+        "getRecentlyAddedContacts": {
+            "path": "lists/{list_id}/contacts/recent",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/get_list_contacts_recent",
+            "action": "get"
+        },
+        "addContacts": {
+            "path": "lists/{list_id}/add",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/add_contact_to_list",
+            "action": "createOrUpdate"
+        },
+        "removeContacts": {
+            "path": "lists/{list_id}/remove",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/lists/remove_contact_from_list",
+            "action": "createOrUpdate"
+        }
+    }
+}

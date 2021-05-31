@@ -1,0 +1,22 @@
+{
+    "resource": "companies",
+    "version": "v2",
+    "bodyPropertyLabel": "name",
+    "methods": {
+        "getAll": {
+            "path": "companies/paged",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/get-all-companies",
+            "action": "get"
+        },
+        "update": {
+            "path": "companies/{companyId}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/get-all-companies",
+            "action": "update"
+        },
+        "create": {
+            "path": "companies",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/get-all-companies",
+            "action": "createOrUpdate"
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "resource": "properties",
+    "version": "v2",
+    "methods": {
+        "getAll": {
+            "path": "{object_type}/properties",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-properties/get-properties",
+            "action": "get"
+        },
+        "create": {
+            "path": "{object_type}/properties",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-properties/create-property",
+            "action": "createOrUpdate"
+        },
+        "update": {
+            "path": "{object_type}/properties/named/{property_name}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-properties/update-property",
+            "action": "patch"
+        },
+        "delete": {
+            "path": "{object_type}/properties/named/{property_name}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-properties/delete-property",
+            "action": "delete"
+        },
+        "getGroups": {
+            "path": "{object_type}/groups",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-properties/get-property-groups",
+            "action": "get"
+        },
+        "createGroup": {
+            "path": "{object_type}/groups",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-properties/create-property-group",
+            "action": "createOrUpdate"
+        },
+        "updateGroup": {
+            "path": "{object_type}/groups/named/{group_name}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-properties/udpate-property-group",
+            "action": "update"
+        },
+        "deleteGroup": {
+            "path": "{object_type}/groups/named/{group_name}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-properties/delete-property-group",
+            "action": "delete"
+        }
+    }
+}

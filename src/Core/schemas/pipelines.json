@@ -1,0 +1,26 @@
+{
+    "resource": "crm-pipelines",
+    "version": "v1",
+    "methods": {
+        "getAll": {
+            "path": "pipelines/{object_type}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/pipelines/get_pipelines_for_object_type",
+            "action": "get"
+        },
+        "create": {
+            "path": "pipelines/{object_type}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/pipelines/create_new_pipeline",
+            "action": "createOrUpdate"
+        },
+        "update": {
+            "path": "pipelines/{object_type}/{pipeline_id}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/pipelines/update_pipeline",
+            "action": "update"
+        },
+        "delete": {
+            "path": "pipelines/{object_type}/{pipeline_id}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/pipelines/delete_pipeline",
+            "action": "delete"
+        }
+    }
+}

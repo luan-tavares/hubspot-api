@@ -1,0 +1,23 @@
+{
+    "resource": "crm-associations",
+    "version": "v1",
+    "bodyPropertyLabel": "property",
+    "index": "vid",
+    "methods": {
+        "get": {
+            "path": "associations/{objectId}/HUBSPOT_DEFINED/{definitionId}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-associations/get-associations",
+            "action": "get"
+        },
+        "create": {
+            "path": "associations",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-associations/associate-objects",
+            "action": "update"
+        },
+        "delete": {
+            "path": "associations/delete",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-associations/delete-association",
+            "action": "delete"
+        }
+    }
+}

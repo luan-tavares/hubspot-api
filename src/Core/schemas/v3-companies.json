@@ -1,0 +1,12 @@
+{
+    "resource": "crm",
+    "version": "v3",
+    "bodyPropertyLabel": "name",
+    "methods": {
+        "getAll": {
+            "path": "objects/companies",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/companies",
+            "action": "get"
+        }
+    }
+}

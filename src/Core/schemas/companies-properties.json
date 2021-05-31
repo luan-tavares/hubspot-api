@@ -1,0 +1,52 @@
+{
+    "resource": "properties",
+    "version": "v1",
+    "index": "name",
+    "methods": {
+        "getAllProperties": {
+            "path": "companies/properties",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/get_company_properties",
+            "action": "get"
+        },
+        "getProperty": {
+            "path": "companies/properties/named/{property}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/get_company_property",
+            "action": "get"
+        },
+        "getAllGroups": {
+            "path": "companies/groups",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/get_company_property_groups",
+            "action": "get"
+        },
+        "createProperty": {
+            "path": "companies/properties",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/create_company_property",
+            "action": "createOrUpdate"
+        },
+        "createGroup": {
+            "path": "companies/groups",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/create_company_property_group",
+            "action": "createOrUpdate"
+        },
+        "updateProperty": {
+            "path": "companies/properties/named/{property}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/update_company_property",
+            "action": "update"
+        },
+        "updateGroup": {
+            "path": "companies/groups/named/{group}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/update_company_property_group",
+            "action": "update"
+        },
+        "deleteProperty": {
+            "path": "companies/properties/named/{property}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/delete_company_property",
+            "action": "delete"
+        },
+        "deleteGroup": {
+            "path": "companies/groups/named/{group}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/companies/delete_company_property_group",
+            "action": "delete"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "resource": "webhooks",
+    "version": "v1",
+    "methods": {
+        "getAll": {
+            "path": "{appId}/subscriptions",
+            "documentation": "",
+            "action": "get"
+        },
+        "create": {
+            "path": "{appId}/subscriptions",
+            "documentation": "",
+            "action": "createOrUpdate"
+        },
+        "update": {
+            "path": "{appId}/subscriptions/{subscriptionId}",
+            "documentation": "",
+            "action": "update"
+        },
+        "delete": {
+            "path": "{appId}/subscriptions/{subscriptionId}",
+            "documentation": "",
+            "action": "delete"
+        }
+    }
+}

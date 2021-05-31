@@ -1,0 +1,27 @@
+{
+    "name": "luan-tavares/hubspot-api",
+    "license": "mit",
+    "description": "Hubspot API",
+    "authors": [
+        {
+            "name": "Luan Tavares Lourenço",
+            "email": "luan.tavares.lourenco@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DevHokage\\HubspotAPI\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "bin":[
+        "bin/hubspot"
+    ],
+    "require": {
+        "php": "^7.2.5|^8.0",
+        "larapack/dd": "1.*"
+    }
+}

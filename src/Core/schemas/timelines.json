@@ -1,0 +1,16 @@
+{
+    "resource": "integrations",
+    "version": "v1",
+    "methods": {
+        "createOrUpdate": {
+            "path": "{appId}/timeline/event",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/timeline/create-or-update-event",
+            "action": "update"
+        },
+        "get": {
+            "path": "{appId}/timeline/event/{eventType}/{eventId}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/timeline/get-event",
+            "action": "get"
+        }
+    }
+}

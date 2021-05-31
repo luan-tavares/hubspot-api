@@ -1,0 +1,36 @@
+{
+    "resource": "crm",
+    "version": "v3",
+    "methods": {
+        "get": {
+            "path": "objects/{objectType}",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/crm-custom-objects",
+            "action": "get"
+        },
+        "create": {
+            "path": "objects/{objectType}",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/crm-custom-objects",
+            "action": "createOrUpdate"
+        },
+        "update": {
+            "path": "objects/{objectType}/{id}",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/crm-custom-objects",
+            "action": "patch"
+        },
+        "delete": {
+            "path": "objects/{objectType}/{id}",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/crm-custom-objects",
+            "action": "delete"
+        },
+        "search":{
+            "path": "objects/{objectType}/search",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/crm-custom-objects",
+            "action": "createOrUpdate"
+        },
+        "createAssociation": {
+            "path": "objects/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId}/{associationType}",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/crm-custom-objects",
+            "action": "update"
+        }
+    }
+}

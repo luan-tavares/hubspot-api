@@ -1,0 +1,37 @@
+{
+    "resource": "engagements",
+    "version": "v1",
+    "index": "id",
+    "methods": {
+        "getRecents": {
+            "path": "engagements/recent/modified",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/engagements/get-recent-engagements",
+            "action": "get"
+        },
+        "create": {
+            "path": "engagements",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/engagements/create_engagement",
+            "action": "createOrUpdate"
+        },
+        "update": {
+            "path": "engagements/{engagementId}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/engagements/update_engagement-patch",
+            "action": "patch"
+        },
+        "get": {
+            "path": "engagements/{engagementId}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/engagements/get_engagement",
+            "action": "get"
+        },
+        "getAll": {
+            "path": "engagements/paged",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/engagements/get-all-engagements",
+            "action": "get"
+        },
+        "delete": {
+            "path": "engagements/{engagementId}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/engagements/delete-engagement",
+            "action": "delete"
+        }
+    }
+}

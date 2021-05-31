@@ -1,0 +1,31 @@
+{
+    "resource": "crm-objects",
+    "version": "v1",
+    "methods": {
+        "getAll": {
+            "path": "objects/line_items/paged",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/line-items/get-all-line-items",
+            "action": "get"
+        },
+        "get": {
+            "path": "objects/line_items/{id}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/line-items/get_line_item_by_id",
+            "action": "get"
+        },
+        "create": {
+            "path": "objects/line_items",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/line-items/create-line-item",
+            "action": "createOrUpdate"
+        },
+        "update": {
+            "path": "objects/line_items/{id}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/line-items/update-line-item",
+            "action": "update"
+        },
+        "delete": {
+            "path": "objects/line_items/{id}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/line-items/delete-line-item",
+            "action": "delete"
+        }
+    }
+}

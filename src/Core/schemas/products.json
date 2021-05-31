@@ -1,0 +1,51 @@
+{
+    "resource": "crm-objects",
+    "version": "v1",
+    "methods": {
+        "getAll": {
+            "path": "objects/products/paged",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/products/get-all-products",
+            "action": "get"
+        },
+        "get": {
+            "path": "objects/products/{id}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/products/get_product_by_id",
+            "action": "get"
+        },
+        "create": {
+            "path": "objects/products",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/products/create-product",
+            "action": "createOrUpdate"
+        },
+        "update": {
+            "path": "objects/products/{id}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/products/update-products",
+            "action": "update"
+        },
+        "delete": {
+            "path": "objects/products/{id}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/products/delete-product",
+            "action": "delete"
+        },
+        "batchCreate": {
+            "path": "objects/products/batch-create",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/products/batch-create-products",
+            "action": "createOrUpdate"
+        },
+        "batchUpdate": {
+            "path": "objects/products/batch-update",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/products/batch-update-products",
+            "action": "createOrUpdate"
+        },
+        "batchDelete": {
+            "path": "objects/products/batch-delete",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/products/batch-delete-products",
+            "action": "createOrUpdate"
+        },
+        "batchGet": {
+            "path": "objects/products/batch-read",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/products/batch-get-products",
+            "action": "createOrUpdate"
+        }
+    }
+}
