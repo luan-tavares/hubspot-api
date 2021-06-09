@@ -2,13 +2,11 @@
     "name": "luan-tavares/hubspot-api",
     "license": "mit",
     "description": "Hubspot API",
-    "authors": [
-        {
-            "name": "Luan Tavares Lourenço",
-            "email": "luan.tavares.lourenco@gmail.com",
-            "role": "Developer"
-        }
-    ],
+    "authors": [{
+        "name": "Luan Tavares Lourenço",
+        "email": "luan.tavares.lourenco@gmail.com",
+        "role": "Developer"
+    }],
     "autoload": {
         "psr-4": {
             "DevHokage\\HubspotAPI\\": "src/"
@@ -17,11 +15,20 @@
             "src/helpers.php"
         ]
     },
-    "bin":[
+    "bin": [
         "bin/hubspot"
     ],
     "require": {
         "php": "^7.2.5|^8.0",
         "larapack/dd": "1.*"
+    },
+    "scripts": {
+        "deploy": [
+            "git add .",
+            "echo \"Commit description: (press ctrl + d)\" && cat > commit.txt",
+            "git commit -F commit.txt",
+            "rm commit.txt",
+            "git push"
+        ]
     }
 }

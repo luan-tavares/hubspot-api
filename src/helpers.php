@@ -8,7 +8,7 @@ if (!function_exists("hubspot")) {
 }
 
 if (!function_exists("hubspotKey")) {
-    function hubspotKey(string $hapikey): void
+    function hubspotKey($hapikey): void
     {
         DevHokage\HubspotAPI\Core\Resource::hapikey($hapikey);
     }
