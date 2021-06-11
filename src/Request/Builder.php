@@ -121,6 +121,20 @@ class Builder
         return $this;
     }
 
+    public function properties($properties): Builder
+    {
+        $this->uriQueries["properties"] = $properties;
+
+        return $this;
+    }
+
+    public function associations($associations): Builder
+    {
+        $this->uriQueries["associations"] = $associations;
+
+        return $this;
+    }
+
     public function after(string $after): Builder
     {
         $this->uriQueries["after"] = $after;

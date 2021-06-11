@@ -1,0 +1,17 @@
+{
+    "resource": "crm",
+    "version": "v3",
+    "methods": {
+        "getAll": {
+            "path": "objects/contacts",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/contacts",
+            "action": "get"
+        },
+        "getById": {
+            "path": "objects/contacts/{contactId}",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/contacts",
+            "action": "get"
+        }
+
+    }
+}
