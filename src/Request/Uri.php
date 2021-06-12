@@ -30,7 +30,7 @@ class Uri
   
         $query .= "&".http_build_query($uriQueries);
 
-        if (isset($uriQueries["properties"])) {
+        if (isset($uriQueries["properties"]) && is_array($uriQueries)) {
             foreach ($uriQueries["properties"] as $property) {
                 $query .= "&property=" . $property;
             }
