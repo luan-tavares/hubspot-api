@@ -1,0 +1,17 @@
+{
+    "resource": "crm",
+    "version": "v3",
+    "methods": {
+        "getAll": {
+            "path": "objects/deals",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/deals",
+            "action": "get"
+        },
+        "getById": {
+            "path": "objects/deals/{dealId}",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/deals",
+            "action": "get"
+        }
+
+    }
+}

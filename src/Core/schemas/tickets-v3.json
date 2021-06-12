@@ -1,0 +1,17 @@
+{
+    "resource": "crm",
+    "version": "v3",
+    "methods": {
+        "getAll": {
+            "path": "objects/tickets",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/tickets",
+            "action": "get"
+        },
+        "getById": {
+            "path": "objects/tickets/{ticketId}",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/tickets",
+            "action": "get"
+        }
+
+    }
+}
