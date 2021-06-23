@@ -27,10 +27,10 @@ abstract class Curl
     public static function connect(array $params): ?string
     {
         self::$curl = self::CURL_PARAMS;
- 
+        
         self::resolveHeader($params["header"])
-            ::resolveMethod($params["method"])
-            ::resolveBody($params["body"]);
+        ::resolveMethod($params["method"])
+        ::resolveBody($params["body"]);
   
         $request = curl_init($params["uri"]);
   

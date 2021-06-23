@@ -72,6 +72,11 @@
             "path": "contact/vid/{vid}",
             "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/delete_contact",
             "action": "delete"
+        },
+        "merge": {
+            "path": "contact/merge-vids/{vId}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/merge-contacts",
+            "action": "createOrUpdate"
         }
     }
 }
