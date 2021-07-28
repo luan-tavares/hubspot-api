@@ -20,7 +20,8 @@
     ],
     "require": {
         "php": "^7.2.5|^8.0",
-        "larapack/dd": "1.*"
+        "larapack/dd": "1.*",
+        "tightenco/collect": "^8.34"
     },
     "scripts": {
         "deploy": [

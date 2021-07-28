@@ -4,27 +4,27 @@
     "bodyPropertyLabel": "property",
     "index": "name",
     "methods": {
-        "getAllProperties": {
+        "getAll": {
             "path": "deals/properties",
             "documentation": "https://legacydocs.hubspot.com/docs/methods/deals/get_deal_properties",
             "action": "get"
         },
-        "getProperty": {
+        "get": {
             "path": "deals/properties/named/{property}",
             "documentation": "https://legacydocs.hubspot.com/docs/methods/deals/get_deal_property",
             "action": "get"
         },
-        "createProperty": {
+        "create": {
             "path": "deals/properties",
             "documentation": "https://legacydocs.hubspot.com/docs/methods/deals/create_deal_property",
             "action": "createOrUpdate"
         },
-        "updateProperty": {
+        "update": {
             "path": "deals/properties/named/{property}",
             "documentation": "https://legacydocs.hubspot.com/docs/methods/deals/update_deal_property",
             "action": "update"
         },
-        "deleteProperty": {
+        "delete": {
             "path": "deals/properties/named/{property}",
             "documentation": "https://legacydocs.hubspot.com/docs/methods/deals/delete_deal_property",
             "action": "delete"

@@ -2,13 +2,13 @@
     "resource": "properties",
     "version": "v1",
     "methods": {
-        "getAllProperties": {
+        "getAll": {
             "path": "contacts/properties",
             "documentation": "",
             "action": "get"
         },
-        "getAllGroups": {
-            "path": "contacts/groups",
+        "get": {
+            "path": "contacts/properties/named/{property_name}",
             "documentation": "",
             "action": "get"
         },
@@ -26,6 +26,11 @@
             "path": "contacts/properties/named/{property_name}",
             "documentation": "https://legacydocs.hubspot.com/docs/methods/contacts/v2/delete_contact_property",
             "action": "delete"
+        },
+        "getAllGroups": {
+            "path": "contacts/groups",
+            "documentation": "",
+            "action": "get"
         },
         "createGroup": {
             "path": "contacts/groups",
