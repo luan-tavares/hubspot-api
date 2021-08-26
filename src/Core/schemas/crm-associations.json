@@ -18,6 +18,16 @@
             "path": "associations/delete",
             "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-associations/delete-association",
             "action": "delete"
+        },
+        "batchCreate": {
+            "path": "associations/create-batch",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-associations/batch-associate-objects",
+            "action": "update"
+        },
+        "batchDelete": {
+            "path": "associations/delete-batch",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/crm-associations/batch-delete-associations",
+            "action": "update"
         }
     }
 }

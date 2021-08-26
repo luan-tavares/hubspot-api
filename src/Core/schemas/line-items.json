@@ -27,5 +27,25 @@
             "documentation": "https://legacydocs.hubspot.com/docs/methods/line-items/delete-line-item",
             "action": "delete"
         }
+    },
+    "getGroup": {
+        "path": "objects/line_items/batch-read",
+        "documentation": "https://legacydocs.hubspot.com/docs/methods/line-items/batch-get-line-items",
+        "action": "createOrUpdate"
+    },
+    "batchCreate": {
+        "path": "objects/line_items/batch-create",
+        "documentation": "https://legacydocs.hubspot.com/docs/methods/line-items/batch-create-line-items",
+        "action": "createOrUpdate"
+    },
+    "batchUpdate": {
+        "path": "objects/line_items/batch-update",
+        "documentation": "https://legacydocs.hubspot.com/docs/methods/line-items/batch-update-line-items",
+        "action": "createOrUpdate"
+    },
+    "batchDelete": {
+        "path": "objects/line_items/batch-delete",
+        "documentation": "https://legacydocs.hubspot.com/docs/methods/line-items/batch-delete-line-items",
+        "action": "createOrUpdate"
     }
 }
