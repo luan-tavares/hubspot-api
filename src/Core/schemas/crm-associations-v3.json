@@ -1,0 +1,21 @@
+{
+    "resource": "crm",
+    "version": "v3",
+    "methods": {
+        "batchRead": {
+            "path": "associations/{fromObjectType}/{toObjectType}/batch/read",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/associations",
+            "action": "createOrUpdate"
+        },
+        "batchCreate": {
+            "path": "associations/{fromObjectType}/{toObjectType}/batch/create",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/associations",
+            "action": "createOrUpdate"
+        },
+        "batchArchive": {
+            "path": "associations/{fromObjectType}/{toObjectType}/batch/archive",
+            "documentation": "https://developers.hubspot.com/docs/api/crm/associations",
+            "action": "createOrUpdate"
+        }
+    }
+}
