@@ -4,7 +4,8 @@
         "upload": {
             "path": "v3/files/upload",
             "documentation": "https://legacydocs.hubspot.com/docs/methods/files/v3/upload_new_file",
-            "action": "createOrUpdate"
+            "action": "createOrUpdate",
+            "contentType": "multipart/form-data"
         },
         "replace": {
             "path": "v3/files/{file_id}/replace",

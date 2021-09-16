@@ -28,11 +28,11 @@ abstract class Curl
     {
         self::$curl = self::CURL_PARAMS;
         
-        self::resolveHeader($params["header"])
-        ::resolveMethod($params["method"])
-        ::resolveBody($params["body"]);
+        self::resolveHeader($params['header'])
+        ::resolveMethod($params['method'])
+        ::resolveBody($params['body']);
   
-        $request = curl_init($params["uri"]);
+        $request = curl_init($params['uri']);
   
         foreach (self::$curl as $index => $value) {
             curl_setopt($request, $index, $value);

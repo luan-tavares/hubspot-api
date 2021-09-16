@@ -29,7 +29,7 @@ trait Concerns
 
     private function curlBody($data = null): Builder
     {
-        if ($this->httpMethod === "GET") {
+        if ($this->httpMethod === 'GET') {
             throw new Exception("GET Method haven't body", 1);
         }
 
@@ -42,10 +42,10 @@ trait Concerns
     private function makeCurl()
     {
         $params = [
-            "uri" => $this->makeURI(),
-            "body" => $this->body,
-            "header" => $this->header,
-            "method" => $this->httpMethod,
+            'uri' => $this->makeURI(),
+            'body' => $this->body,
+            'header' => $this->header,
+            'method' => $this->httpMethod,
         ];
 
         //dd($params);
@@ -61,7 +61,7 @@ trait Concerns
             return $this;
         }
           
-        $this->addOrChangeHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+        $this->addOrChangeHeader('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8');
   
         $this->body = http_build_query($values);
   
@@ -77,10 +77,11 @@ trait Concerns
 
     public function oAuth(string $oAuth)
     {
-        $this->header["Authorization"] = "Bearer {$oAuth}";
+        $this->header['Authorization'] = "Bearer {$oAuth}";
 
         return $this;
     }
+
 
     private function reset()
     {
@@ -88,7 +89,7 @@ trait Concerns
         $this->httpMethod = self::HUBSPOT_DEFAULT_HTTP_METHOD;
         $this->body = null;
         $this->uriQueries = [
-            "limit" => self::HUBSPOT_DEFAULT_LIMIT,
+            'limit' => self::HUBSPOT_DEFAULT_LIMIT,
         ];
     }
 }
