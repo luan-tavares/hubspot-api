@@ -10,11 +10,16 @@ abstract class Curl
         CURLOPT_SSL_VERIFYHOST => 0,
         CURLOPT_HTTPHEADER     => null,
         CURLOPT_CUSTOMREQUEST  => null,
+        CURLOPT_MAXREDIRS => -1,
+        CURLOPT_NOPROGRESS => false,
         CURLOPT_POSTFIELDS     => null,
+        CURLOPT_TIMEOUT => 0,
     ];
     private const JSON_ENCODE = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE;
 
     private static $curl;
+
+    private static $params;
 
     private function __construct()
     {
@@ -26,11 +31,11 @@ abstract class Curl
 
     public static function connect(array $params): ?string
     {
+        self::$params = $params;
+
         self::$curl = self::CURL_PARAMS;
         
-        self::resolveHeader($params['header'])
-        ::resolveMethod($params['method'])
-        ::resolveBody($params['body']);
+        self::resolveHeader()::resolveMethod()::resolveBody();
   
         $request = curl_init($params['uri']);
   
@@ -45,15 +50,17 @@ abstract class Curl
         return $response;
     }
 
-    private static function resolveBody($body)
+    private static function resolveBody()
     {
+        $body = self::$params['body'];
+
         if (!$body) {
             unset(self::$curl[CURLOPT_POSTFIELDS]);
 
             return __CLASS__;
         }
 
-        if (is_array($body)) {
+        if (is_array($body) && !(@self::$params['header']['Content-Type'] === 'multipart/form-data')) {
             $body = json_encode($body, self::JSON_ENCODE);
         }
         self::$curl[CURLOPT_POSTFIELDS] = $body;
@@ -61,15 +68,19 @@ abstract class Curl
         return __CLASS__;
     }
   
-    private static function resolveMethod($method)
+    private static function resolveMethod()
     {
+        $method = self::$params['method'];
+
         self::$curl[CURLOPT_CUSTOMREQUEST] = $method;
 
         return __CLASS__;
     }
   
-    private static function resolveHeader(array $header)
+    private static function resolveHeader()
     {
+        $header = self::$params['header'];
+
         $resolveHeader = [];
         foreach ($header as $name => $value) {
             $resolveHeader[] = "{$name}: {$value}";
