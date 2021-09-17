@@ -42,12 +42,16 @@ class Builder
         $resourceMap = Container::getMap($resource);
         $this->resource = $resource;
         $this->map = $resourceMap;
-        $version = '';
+        $version = $resource =  '';
 
         if (@$resourceMap['version']) {
             $version = '/'. $resourceMap['version'];
         }
-        $this->endpoint = self::HUBSPOT_BASE_URL . '/'. $resourceMap['resource'] . $version;
+
+        if (@$resourceMap['resource']) {
+            $resource = '/'. $resourceMap['resource'];
+        }
+        $this->endpoint = self::HUBSPOT_BASE_URL . $resource . $version;
         $this->reset();
     }
 
