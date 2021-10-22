@@ -23,7 +23,7 @@ class Resource implements ResourceInterface
         }
 
         if (!in_array($resource, Container::resources())) {
-            throw new Exception("\"{$resource}\" is not a valid resource. Valid Resources: \"". implode("\",\"", Container::resourcers()) ."\"", 1);
+            throw new Exception("\"{$resource}\" is not a valid resource. Valid Resources: \"". implode('","', Container::resourcers()) .'"', 1);
         }
         $this->resource = $resource;
     }
@@ -50,16 +50,6 @@ class Resource implements ResourceInterface
         return call_user_func_array([(new static), $method], $parameters);
     }
 
-    /**
-     * Get $data
-     *
-     * @return stdClass|null
-     */
-    public function data(): ?stdClass
-    {
-        return $this->data;
-    }
-
     public function getResource(): string
     {
         return $this->resource;
@@ -79,6 +69,11 @@ class Resource implements ResourceInterface
         }
 
         return null;
+    }
+
+    public function toJson(): ?string
+    {
+        return $this->rawResponse ?? null;
     }
 
     public function setAction(string $action): Builder
