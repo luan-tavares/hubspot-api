@@ -1,0 +1,16 @@
+{
+    "resource": "automation",
+    "version": "v4",
+    "methods": {
+        "completeCallback": {
+            "path": "actions/callbacks/{callbackId}/complete",
+            "documentation": "https://developers.hubspot.com/docs/api/automation/custom-workflow-actions",
+            "action": "createOrUpdate"
+        },
+        "completeBatchCallbacks": {
+            "path": "actions/callbacks/complete",
+            "documentation": "https://developers.hubspot.com/docs/api/automation/custom-workflow-actions",
+            "action": "createOrUpdate"
+        }
+    }
+}

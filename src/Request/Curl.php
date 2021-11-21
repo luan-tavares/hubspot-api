@@ -11,7 +11,7 @@ abstract class Curl
         CURLOPT_HTTPHEADER     => null,
         CURLOPT_CUSTOMREQUEST  => null,
         CURLOPT_MAXREDIRS => -1,
-        CURLOPT_NOPROGRESS => false,
+        //CURLOPT_NOPROGRESS => false,
         CURLOPT_POSTFIELDS     => null,
         CURLOPT_TIMEOUT => 0,
     ];
