@@ -1,0 +1,41 @@
+{
+    "resource": "forms",
+    "version": "v2",
+    "methods": {
+        "create": {
+            "path": "forms",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/forms/v2/create_form",
+            "action": "createOrUpdate"
+        },
+        "update": {
+            "path": "forms/{form_guid}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/forms/v2/update_form",
+            "action": "update"
+        },
+        "get": {
+            "path": "forms/{form_guid}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/forms/v2/get_form",
+            "action": "get"
+        },
+        "getFields": {
+            "path": "fields/{form_guid}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/forms/v2/get_fields",
+            "action": "get"
+        },
+        "getField": {
+            "path": "fields/{form_guid}/{field_name}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/forms/v2/get_field",
+            "action": "get"
+        },
+        "getAll": {
+            "path": "forms",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/forms/v2/get_forms",
+            "action": "get"
+        },
+        "delete": {
+            "path": "forms/{form_guid}",
+            "documentation": "https://legacydocs.hubspot.com/docs/methods/forms/v2/delete_form",
+            "action": "delete"
+        }
+    }
+}
