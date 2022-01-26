@@ -13,9 +13,38 @@ if (!file_exists($dir.'/autoload.php')) {
 
 if (!file_exists($dir.'/autoload.php')) {
     echo 'Autoload not found.';
+
     exit(1);
 }
 
 require $dir.'/autoload.php';
 
-print_r($argv);
+$content = file_get_contents(__DIR__ . '/../src/Core/resource.stub');
+
+$document = json_decode(file_get_contents(__DIR__ . "/../src/Core/schemas/{$argv[1]}.json"), true);
+
+
+$content = str_replace('{{class}}', $document['class'], $content);
+$content = str_replace('{{name}}', $argv[1], $content);
+
+$doc = '';
+foreach ($document['methods'] as $method => $value) {
+    preg_match_all('/\{(.*?)\}/', $value['path'], $matches);
+
+    $params = array_map(function ($item) {
+        return 'int|string $'. $item;
+    }, $matches[1]);
+
+    if ($value['action'] != 'get' && $value['action'] != 'delete') {
+        $params[] = 'array $requestBody';
+    }
+ 
+    $params = implode(', ', $params);
+    
+    $doc .= "* @method static \$this {$method}({$params}) \n";
+    $doc .= "* @method \$this {$method}({$params}) \n";
+}
+
+$content = str_replace('{{docs}}', $doc, $content);
+
+file_put_contents(__DIR__ .'/../src/Resources/'. $document['class'] .'.php', $content);

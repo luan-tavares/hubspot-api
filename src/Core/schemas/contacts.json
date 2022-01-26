@@ -3,6 +3,7 @@
     "version": "v1",
     "bodyPropertyLabel": "property",
     "index": "vid",
+    "class": "Contact",
     "methods": {
         "getAll": {
             "path": "lists/all/contacts/all",

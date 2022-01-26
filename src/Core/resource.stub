@@ -1,0 +1,12 @@
+<?php
+
+namespace DevHokage\HubspotAPI\Resources;
+
+use DevHokage\HubspotAPI\Core\Resource;
+
+/**
+{{docs}} */
+class {{class}} extends Resource
+{
+    protected $resource = "{{name}}";
+}

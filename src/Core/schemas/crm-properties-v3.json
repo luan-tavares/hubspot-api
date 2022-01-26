@@ -1,0 +1,60 @@
+{
+    "resource": "crm",
+    "version": "v3",
+    "class": "CrmPropertyV3",
+    "documentation": "https://developers.hubspot.com/docs/api/crm/properties",
+    "methods": {
+        "getAll": {
+            "path": "properties/{objectType}",
+            "action": "get"
+        },
+        "get": {
+            "path": "properties/{objectType}/{propertyName}",
+            "action": "get"
+        },
+        "create": {
+            "path": "properties/{objectType}",
+            "action": "createOrUpdate"
+        },
+        "update": {
+            "path": "properties/{objectType}/{propertyName}",
+            "action": "patch"
+        },
+        "archive": {
+            "path": "properties/{objectType}/{propertyName}",
+            "action": "delete"
+        },
+        "batchArchive": {
+            "path": "properties/{objectType}/batch/archive",
+            "action": "createOrUpdate"
+        },
+        "batchCreate": {
+            "path": "properties/{objectType}/batch/create",
+            "action": "createOrUpdate"
+        },
+        "batchGet": {
+            "path": "properties/{objectType}/batch/read",
+            "action": "createOrUpdate"
+        },
+        "getAllGroups": {
+            "path": "properties/{objectType}/groups",
+            "action": "get"
+        },
+        "getGroup": {
+            "path": "properties/{objectType}/groups/{groupName}",
+            "action": "get"
+        },
+        "createGroup": {
+            "path": "properties/{objectType}/groups",
+            "action": "createOrUpdate"
+        },
+        "updateGroup": {
+            "path": "properties/{objectType}/groups/{groupName}",
+            "action": "patch"
+        },
+        "archiveGroup": {
+            "path": "properties/{objectType}/groups/{groupName}",
+            "action": "delete"
+        }
+    }
+}

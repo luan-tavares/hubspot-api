@@ -1,6 +1,7 @@
 {
     "resource": "crm",
     "version": "v3",
+    "class": "ContactV3",
     "methods": {
         "getAll": {
             "path": "objects/contacts",

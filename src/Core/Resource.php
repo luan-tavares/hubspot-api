@@ -6,6 +6,11 @@ use DevHokage\HubspotAPI\Core\Interfaces\ResourceInterface;
 use Exception;
 use stdClass;
 
+ /**
+  * @method static array toArray() Teste Luan
+  * @method ?string toJson()
+  * @method static $this properties(string ...$property)
+  */
 class Resource implements ResourceInterface
 {
     protected $resource;

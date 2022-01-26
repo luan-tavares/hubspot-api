@@ -3,6 +3,7 @@
     "version": "v1",
     "bodyPropertyLabel": "property",
     "index": "vid",
+    "class": "CrmAssociation",
     "methods": {
         "get": {
             "path": "associations/{objectId}/HUBSPOT_DEFINED/{definitionId}",

@@ -2,6 +2,7 @@
     "resource": "properties",
     "version": "v1",
     "index": "name",
+    "class": "CompanyProperty",
     "methods": {
         "getAll": {
             "path": "companies/properties",
