@@ -13,6 +13,8 @@ abstract class Container
 
     private static $apiKey;
 
+    private static $oAuth;
+
     private function __construct()
     {
     }
@@ -26,7 +28,7 @@ abstract class Container
         if (!isset(self::$resourceSchema[get_class($resourceObject)])) {
             self::$resourceSchema[get_class($resourceObject)] = new stdClass;
             $schema = &self::$resourceSchema[get_class($resourceObject)];
-            $schema->map =  json_decode(file_get_contents(__DIR__."/schemas/". $resourceObject->getResource() .".json"), true);
+            $schema->map =  json_decode(file_get_contents(__DIR__.'/schemas/'. $resourceObject->getResource() .'.json'), true);
             $schema->builder = new Builder($resourceObject);
         }
 
@@ -47,7 +49,7 @@ abstract class Container
     public static function resources()
     {
         if (!self::$resourcesList) {
-            self::$resourcesList = self::readPath("schemas");
+            self::$resourcesList = self::readPath('schemas');
         }
 
         return self::$resourcesList;
@@ -56,14 +58,14 @@ abstract class Container
     private static function readPath(string $dir)
     {
         try {
-            $dir = dir(__DIR__ ."/". $dir);
+            $dir = dir(__DIR__ .'/'. $dir);
         } catch (Exception $e) {
             throw new Exception("Dir \"{$dir}\" not exists.");
         }
         $files = [];
         while ($file = $dir->read()) {
-            if ($file !=="." and $file !== ".." and pathinfo($file)["extension"] == "json") {
-                $files[] = str_replace(".". pathinfo($file)["extension"], "", $file);
+            if ($file !=='.' and $file !== '..' and pathinfo($file)['extension'] == 'json') {
+                $files[] = str_replace('.'. pathinfo($file)['extension'], '', $file);
             }
         }
         $dir->close();
@@ -81,6 +83,21 @@ abstract class Container
 
         if (self::$apiKey) {
             return self::$apiKey;
+        }
+
+        return null;
+    }
+
+    public static function oAuth(string $value=null): ?string
+    {
+        if ($value) {
+            self::$oAuth = $value;
+
+            return self::$oAuth;
+        }
+
+        if (self::$oAuth) {
+            return self::$oAuth;
         }
 
         return null;

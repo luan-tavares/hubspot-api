@@ -2,6 +2,7 @@
 
 namespace DevHokage\HubspotAPI\Request;
 
+use DevHokage\HubspotAPI\Core\Container;
 use Exception;
 
 trait Concerns
@@ -86,6 +87,10 @@ trait Concerns
     private function reset()
     {
         $this->header = self::HUBSPOT_DEFAULT_HEADER;
+
+        if (!is_null(Container::oAuth())) {
+            $this->oAuth(Container::oAuth());
+        }
         $this->httpMethod = self::HUBSPOT_DEFAULT_HTTP_METHOD;
         $this->body = null;
         $this->uriQueries = [

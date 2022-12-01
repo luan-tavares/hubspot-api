@@ -99,4 +99,9 @@ class Resource implements ResourceInterface
     {
         Container::hapikey($hapikey);
     }
+
+    public static function globalOAuth(string $oAuth): void
+    {
+        Container::oAuth($oAuth);
+    }
 }
